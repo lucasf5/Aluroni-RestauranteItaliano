@@ -2,7 +2,7 @@
 @import "./breakpoints";
 
 .container {
-  min-height: 69vh;
+  min-height: 72.4vh;
   padding: 50px $padding-horizontal;
   @media (max-width: $desktop_xsm) {
     padding: 50px $padding-horizontal-mobile;

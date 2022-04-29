@@ -25,9 +25,11 @@ const Header = () => {
             </Link>
           </ul>
         </nav>
+        
         <section className={Style.header}>
           <div className={Style.header__text}>A casa do código e da massa</div>
         </section>
+
       </header>
       <main className={stylesTema.container}>
         <Outlet />

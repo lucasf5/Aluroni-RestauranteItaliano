@@ -6,6 +6,7 @@ import NotFound from 'pages/NotFound/NotFound';
 import Sobre from 'pages/Sobre/Sobre';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cardapio from './pages/Cardapio/Cardapio';
+import Prato from 'pages/Prato/Prato';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="cardapio" element={<Cardapio />} />
             <Route path="sobre" element={<Sobre />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="prato/:id" element={<Prato />} />
           </Route>
         </Routes>
       </BrowserRouter>
