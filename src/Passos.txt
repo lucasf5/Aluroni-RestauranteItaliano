@@ -1,0 +1,22 @@
+#CRIANDO
+npx create-react-app my-app --template typescript
+
+#APLICANDO CSS MODULES, PARA NÃO SOBREESCREVER ESTILOS
+npm install -D typescript-plugin-css-modules
+
+#INSTALANDO O SASS
+npm install sass
+npm i -D node-sass
+npm i -D @types/node-sass
+
+#CONFIGURANDO O BASEURL
+tsconfig => vá em "compilerOptions" e adicione a baseUrl
+
+"compilerOptions":{
+    "baseUrl": "src" 
+}
+
+#IMPORTANDO O NORMALIZE = RESET CSS
+npm install normalize.css
+
+adicione import "normalize.css" no index.tsx
