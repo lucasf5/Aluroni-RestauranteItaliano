@@ -1,7 +1,7 @@
-import styles from "./Filtros.module.scss";
-import filtros from "../../assets/db.json";
-import { Dispatch, SetStateAction, useEffect } from "react";
-import classNames from "classnames"
+import styles from './Filtros.module.scss';
+import filtros from '../../../assets/db.json';
+import { Dispatch, SetStateAction, useEffect } from 'react';
+import classNames from 'classnames';
 
 interface PadraoOpcao {
   label: string; // "label": "Massas",
@@ -17,7 +17,7 @@ export default function Filtros({idComida, setIdComida}:filtros) {
 
   function selecionarFiltro(comida: PadraoOpcao) {
     if(idComida === comida.id) return setIdComida(null);
-    return setIdComida(comida.id)
+    return setIdComida(comida.id);
   }
 
   return (

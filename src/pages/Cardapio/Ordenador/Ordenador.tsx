@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import styles from "./Ordenador.module.scss";
-import opcoes from "../../assets/db.json";
-import classNames from "classnames";
-import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
+import React, { useState } from 'react';
+import styles from './Ordenador.module.scss';
+import opcoes from '../../../assets/db.json';
+import classNames from 'classnames';
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md';
 
 interface ordenador {
   ordenador: string;
@@ -16,12 +16,12 @@ const Ordenador = ({ ordenador, setOrdenador }: ordenador) => {
       <button
         className={classNames({
           [styles.ordenador]: true,
-          [styles["ordenador--ativo"]]: ordenador !== "",
+          [styles['ordenador--ativo']]: ordenador !== '',
         })}
         onClick={() => setAberto(!aberto)}
         onBlur={() => setAberto(false)}
       >
-        <span>{ordenador || "Ordenado Por"}</span>
+        <span>{ordenador || 'Ordenado Por'}</span>
         {aberto ? (
           <MdKeyboardArrowUp size={20} />
         ) : (
@@ -31,7 +31,7 @@ const Ordenador = ({ ordenador, setOrdenador }: ordenador) => {
         <div
           className={classNames({
             [styles.ordenador__options]: true,
-            [styles["ordenador__options--ativo"]]: aberto,
+            [styles['ordenador__options--ativo']]: aberto,
           })}
         >
           {opcoes.opcoes.map((opcao) => (

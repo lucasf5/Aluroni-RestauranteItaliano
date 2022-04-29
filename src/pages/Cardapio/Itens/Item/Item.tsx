@@ -1,6 +1,6 @@
-import classNames from "classnames";
-import React from "react";
-import styles from "./item.module.scss";
+import classNames from 'classnames';
+import React from 'react';
+import styles from './item.module.scss';
 
 interface itens {
   title: string;
@@ -29,14 +29,14 @@ const Item = ({ item }: { item: itens }) => {
         </div>
         <div className={styles.item__tags}>
           <div className={classNames({
-              [styles.item__tipo]:true,
-              [styles[`item__tipo__${item.category.label.toLowerCase()}`]]: true
+            [styles.item__tipo]:true,
+            [styles[`item__tipo__${item.category.label.toLowerCase()}`]]: true
           })}>
-              {item.category.label}</div>
-          <div className={styles.item__porcao}>{item.size}</div>
-          <div className={styles.item__qtdpessoas}>{item.serving}</div>
+            {item.category.label}</div>
+          <div className={styles.item__porcao}>{item.size}g</div>
+          <div className={styles.item__qtdpessoas}>{item.serving} pessoas</div>
           <div className={styles.item__valor}>
-            {"R$" + item.price.toFixed(2)}
+            {'R$' + item.price.toFixed(2)}
           </div>
         </div>
       </div>
