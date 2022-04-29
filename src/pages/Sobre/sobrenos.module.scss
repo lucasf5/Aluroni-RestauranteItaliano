@@ -29,14 +29,15 @@
 }
 .imagens {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-wrap: nowrap;
+  gap: 2rem;
   justify-content: space-between;
   &__imagem {
     width: 600px;
     img {
       border-radius: 5px;
       width: 100%;
+      height: 90%;
     }
   }
 }

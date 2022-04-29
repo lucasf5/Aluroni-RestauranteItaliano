@@ -7,9 +7,17 @@ $combos: #e6c864;
 $veganos: #80aa40;
 
 .item {
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
   display: flex;
   flex-wrap: wrap;
+  padding: 20px;
+  transition: 0.2s ease-in;
   width: 90%;
+  &:hover {
+    background-color: $grey;
+  }
   &__imagem {
     min-width: 240px;
     @media (max-width: $desktop_xsm) {
@@ -34,6 +42,10 @@ $veganos: #80aa40;
     }
   }
   &__titulo {
+    &_h2 {
+      color: $dark;
+      text-decoration: none;
+    }
     h2 {
       font-size: 2rem;
       font-weight: bold;

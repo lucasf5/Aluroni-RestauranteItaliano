@@ -1,8 +1,8 @@
 import React from 'react';
 import styleTema from 'assets/styles/Tema.module.scss';
 import styles from './sobrenos.module.scss';
-import massa1 from 'assets/imgs/massa1.png';
-import massa2 from 'assets/imgs/massa2.png';
+import massa1 from 'assets/imgs/prato3.jpg';
+import massa2 from 'assets/imgs/prato2.jpg';
 
 const imagens = [massa1, massa2];
 const Sobre = () => {

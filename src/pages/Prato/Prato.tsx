@@ -4,14 +4,19 @@ import stylesTema from 'assets/styles/Tema.module.scss';
 import cardapio from 'assets/db.json';
 import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
+import NotFound from 'pages/NotFound/NotFound';
 
 const Prato = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const {state} = useLocation();
-  
-  const { prato } = state as { prato: typeof cardapio.itens[0]};
+  //const {state} = useLocation();
+  //const { prato } = state as { prato: typeof cardapio.itens[0]};
+
+  const prato = cardapio.itens.find((item) => item.id.toString() === id);
+  if (!prato) {
+    return <NotFound />;
+  }
 
   return (
     <>
@@ -42,7 +47,7 @@ const Prato = () => {
             </div>
             <div className={styles.tags__porcao}>{prato.size}g</div>
             <div className={styles.tags__qtdpessoas}>
-              Serve {prato.serving} pessoa {prato.serving == 1 ? '' : 's'}
+              Serve {prato.serving} pessoa{prato.serving == 1 ? '' : 's'}
             </div>
             <div className={styles.tags__valor}>
               R$ {prato.price.toFixed(2)}
